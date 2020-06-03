@@ -5,9 +5,15 @@ The measurement data repository is a collection of:
 - information about measurements
 - plots, visualization of the data
 
+In order to get things running:
 
 1. Clone the repository
-2. Get the measurement data:
+
+```
+git clone https://github.com/mutschcr/tool-tracking.git
+cd tool-tracking
+
+2. Then you need to download the measurement data from an external host:
 ```
 wget https://owncloud.fraunhofer.de/index.php/s/UOzJU8ypG3ZKKte/download electric_screwdriver.tar.gz
 tar -xzvf electric_screwdriver.tar.gz
@@ -19,8 +25,7 @@ wget https://owncloud.fraunhofer.de/index.php/s/WOiEDXTOz2JgWCD/download pneumat
 tar -xzvf pneumatic_screwdriver.tar.gz
 
 
-
-Setup an environment and start Jupyter Notebook
+3. Setup a conda virtual environment and start Jupyter Notebook
 ```
 conda env create -f environment.yml
 conda activate mdenv

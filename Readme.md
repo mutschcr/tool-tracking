@@ -12,6 +12,7 @@ In order to get things running:
 ```
 git clone https://github.com/mutschcr/tool-tracking.git
 cd tool-tracking
+```
 
 2. Then you need to download the measurement data from an external host:
 ```
@@ -23,7 +24,7 @@ tar -xzvf pneumatic_riveting_gun.tar.gz
 
 wget https://owncloud.fraunhofer.de/index.php/s/WOiEDXTOz2JgWCD/download pneumatic_screwdriver.tar.gz
 tar -xzvf pneumatic_screwdriver.tar.gz
-
+```
 
 3. Setup a conda virtual environment and start Jupyter Notebook
 ```

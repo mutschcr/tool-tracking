@@ -5,6 +5,21 @@ The measurement data repository is a collection of:
 - information about measurements
 - plots, visualization of the data
 
+
+1. Clone the repository
+2. Get the measurement data:
+```
+wget https://owncloud.fraunhofer.de/index.php/s/UOzJU8ypG3ZKKte/download electric_screwdriver.tar.gz
+tar -xzvf electric_screwdriver.tar.gz
+
+wget https://owncloud.fraunhofer.de/index.php/s/ZisA9yrSb0cwAmV/download pneumatic_riveting_gun.tar.gz
+tar -xzvf pneumatic_riveting_gun.tar.gz
+
+wget https://owncloud.fraunhofer.de/index.php/s/WOiEDXTOz2JgWCD/download pneumatic_screwdriver.tar.gz
+tar -xzvf pneumatic_screwdriver.tar.gz
+
+
+
 Setup an environment and start Jupyter Notebook
 ```
 conda env create -f environment.yml

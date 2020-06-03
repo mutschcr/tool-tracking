@@ -16,13 +16,13 @@ cd tool-tracking
 
 2. Then you need to download the measurement data from an external host:
 ```
-wget https://owncloud.fraunhofer.de/index.php/s/UOzJU8ypG3ZKKte/download -o electric_screwdriver.tar.gz
+wget https://owncloud.fraunhofer.de/index.php/s/UOzJU8ypG3ZKKte/download -o electric_screwdriver.tar.gz --show-progress
 tar -xzvf electric_screwdriver.tar.gz
 
-wget https://owncloud.fraunhofer.de/index.php/s/ZisA9yrSb0cwAmV/download -o pneumatic_riveting_gun.tar.gz
+wget https://owncloud.fraunhofer.de/index.php/s/ZisA9yrSb0cwAmV/download -o pneumatic_riveting_gun.tar.gz --show-progress
 tar -xzvf pneumatic_riveting_gun.tar.gz
 
-wget https://owncloud.fraunhofer.de/index.php/s/WOiEDXTOz2JgWCD/download -o pneumatic_screwdriver.tar.gz
+wget https://owncloud.fraunhofer.de/index.php/s/WOiEDXTOz2JgWCD/download -o pneumatic_screwdriver.tar.gz --show-progress
 tar -xzvf pneumatic_screwdriver.tar.gz
 ```
 

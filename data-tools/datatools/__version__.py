@@ -1,0 +1,5 @@
+__version__ = "0.7.0"
+__maintainer__ = "wllr"
+__license__ = "FhG"
+__copyright__ = "2020, MLV, IIS Fraunhofer"
+__description__ = "Tools for reading (time series) data from different sources"

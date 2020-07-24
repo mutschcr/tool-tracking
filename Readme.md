@@ -1,9 +1,4 @@
-# Measurement Data
-
-The measurement data repository is a collection of:
-- _labeled_ data
-- information about measurements
-- plots, visualization of the data
+# Tool Tracking Dataset - Supplement Code
 
 In order to get things running:
 
@@ -26,15 +21,18 @@ wget https://owncloud.fraunhofer.de/index.php/s/WOiEDXTOz2JgWCD/download -O pneu
 tar -xzvf pneumatic_screwdriver.tar.gz && rm pneumatic_screwdriver.tar.gz
 ```
 
-3. Setup a conda virtual environment and start Jupyter Notebook
+3. Setup a virtual python environment (e.g. with [conda](https://www.anaconda.com/))
 ```
-conda env create -f environment.yml
-conda activate mdenv
-pip install seglearn
-cd data_tools
-python deploy.py
-cd ..
-python -m jupyter notebook
+conda create --name tool-tracking_env python=3.7
+conda activate tool-tracking_env
+pip install -r requirements.txt
+```
+
+4. Get introduced on how to load and work with the data
+
+Start [Jupyter](https://jupyter.org/) and run the both notebook `How-to-load-the-data.ipynb` and `plot_window_sizes.ipynb` with:
+```
+jupyter notebook
 ```
 
 The mandatory structure of this repository is as follows:

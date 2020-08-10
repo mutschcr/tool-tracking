@@ -20,6 +20,9 @@ unzip tool-tracking-data.zip && rm tool-tracking-data.zip
 conda create --name tool-tracking_env python=3.7
 conda activate tool-tracking_env
 pip install -r requirements.txt
+cd data-tools
+pip install -e .
+cd ..
 ```
 
 4. Get introduced on how to load and work with the data

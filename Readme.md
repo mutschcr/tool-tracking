@@ -11,7 +11,7 @@ cd tool-tracking
 
 2. Then you need to download the measurement data from an external host:
 ```
-wget https://owncloud.fraunhofer.de/index.php/s/L32olzs8yjRUTGS/download -O tool-tracking-data.zip
+wget https://owncloud.fraunhofer.de/index.php/s/uFv7Sdo6mNZ0NnQ/download -O tool-tracking-data.zip
 unzip tool-tracking-data.zip && rm tool-tracking-data.zip
 ```
 
@@ -28,6 +28,13 @@ Start [Jupyter](https://jupyter.org/) and run the both notebook `How-to-load-the
 ```
 jupyter notebook
 ```
+
+Changelog:
+- 2020-08-12: Update dataset with twice the amount of labeled data; enhanced labels.
+- 2020-07-29: Update data loader and notebooks
+
+Known issues:
+- 2020-08-12: Enforcing window lenghts when segmenting rivetter data lets two very short windows (label -1) slip through. These cause problems and need to be filtered out: 'filter_labels(..)'
 
 License:
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

@@ -11,7 +11,7 @@ cd tool-tracking
 
 2. Then you need to download the measurement data from an external host:
 ```
-wget https://owncloud.fraunhofer.de/index.php/s/uFv7Sdo6mNZ0NnQ/download -O tool-tracking-data.zip
+wget https://owncloud.fraunhofer.de/index.php/s/MQUpf2vhIghAtke/download -O tool-tracking-data.zip
 unzip tool-tracking-data.zip && rm tool-tracking-data.zip
 ```
 
@@ -30,6 +30,7 @@ jupyter notebook
 ```
 
 Changelog:
+- 2020-08-14: Update dataset with enhanced rivetter labels
 - 2020-08-12: Update dataset with twice the amount of labeled data; enhanced labels.
 - 2020-07-29: Update data loader and notebooks
 

@@ -1,0 +1,1164 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>datatools package &mdash; data-tools  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/main_stylesheet.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> data-tools
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="userguide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">data-tools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>datatools package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/datatools.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="datatools-package">
+<h1>datatools package<a class="headerlink" href="#datatools-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-datatools.cli">
+<span id="datatools-cli-module"></span><h2>datatools.cli module<a class="headerlink" href="#module-datatools.cli" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-datatools.constants">
+<span id="datatools-constants-module"></span><h2>datatools.constants module<a class="headerlink" href="#module-datatools.constants" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-datatools.convert">
+<span id="datatools-convert-module"></span><h2>datatools.convert module<a class="headerlink" href="#module-datatools.convert" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="datatools.convert.to_ts_data">
+<code class="sig-prename descclassname">datatools.convert.</code><code class="sig-name descname">to_ts_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">Union<span class="p">[</span><a class="reference internal" href="#datatools.data.DataBunch" title="datatools.data.DataBunch">datatools.data.DataBunch</a><span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span><a class="reference internal" href="#datatools.data.DataBunch" title="datatools.data.DataBunch">datatools.data.DataBunch</a><span class="p">]</span><span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span><a class="reference internal" href="#datatools.data.DataBunch" title="datatools.data.DataBunch">datatools.data.DataBunch</a><span class="p">]</span><span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">contextual_recarray_dtype</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>Tuple<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>List<span class="p">, </span>numpy.recarray<span class="p">, </span>List<span class="p">]</span><a class="headerlink" href="#datatools.convert.to_ts_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts data from the MeasurementDataReader to a format appropriate for the seglearn framework.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict of DataBunch</em><em> or </em><a class="reference internal" href="#datatools.data.DataBunch" title="datatools.data.DataBunch"><em>DataBunch</em></a>) – Data from as the read function from MeasurementDataReader provides.</p></li>
+<li><p><strong>contextual_recarray_dtype</strong> – Numpy recarray dtype used to construct the contextual data.
+Default dtype is <code class="code docutils literal notranslate"><span class="pre">[('cls',</span> <span class="pre">&quot;&quot;),</span> <span class="pre">('sr',</span> <span class="pre">float),</span> <span class="pre">('id',</span> <span class="pre">int),</span> <span class="pre">('desc',</span> <span class="pre">&quot;&quot;)]</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ts_data</strong> – Time series data in the seglearn format.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple of arrays</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-datatools.data">
+<span id="datatools-data-module"></span><h2>datatools.data module<a class="headerlink" href="#module-datatools.data" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="datatools.data.Bunch">
+<em class="property">class </em><code class="sig-prename descclassname">datatools.data.</code><code class="sig-name descname">Bunch</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.data.Bunch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+<p>Container object for datasets</p>
+<p>Dictionary-like object that exposes its keys as attributes.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">Bunch</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">b</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt id="datatools.data.DataBunch">
+<em class="property">class </em><code class="sig-prename descclassname">datatools.data.</code><code class="sig-name descname">DataBunch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">acc</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#datatools.data.DataCSV" title="datatools.data.DataCSV">datatools.data.DataCSV</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gyr</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#datatools.data.DataCSV" title="datatools.data.DataCSV">datatools.data.DataCSV</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mag</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#datatools.data.DataCSV" title="datatools.data.DataCSV">datatools.data.DataCSV</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pos</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#datatools.data.DataCSV" title="datatools.data.DataCSV">datatools.data.DataCSV</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vel</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#datatools.data.DataCSV" title="datatools.data.DataCSV">datatools.data.DataCSV</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mic</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#datatools.data.DataCSV" title="datatools.data.DataCSV">datatools.data.DataCSV</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">classes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Dict<span class="p">[</span>int<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.data.DataBunch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datatools.data.Bunch" title="datatools.data.Bunch"><code class="xref py py-class docutils literal notranslate"><span class="pre">datatools.data.Bunch</span></code></a></p>
+<p>Class for storing data of one single measurement.</p>
+<dl class="py method">
+<dt id="datatools.data.DataBunch.concat">
+<em class="property">classmethod </em><code class="sig-name descname">concat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#datatools.data.DataBunch" title="datatools.data.DataBunch">datatools.data.DataBunch</a><a class="headerlink" href="#datatools.data.DataBunch.concat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenate multiple data bunches to a single bunch.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.DataBunch.data_keys">
+<code class="sig-name descname">data_keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>str<span class="p">]</span><a class="headerlink" href="#datatools.data.DataBunch.data_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all keys associated with stored data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.DataBunch.finalize">
+<code class="sig-name descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datatools.data.DataBunch.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Carries out clean up tasks and checks.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.DataBunch.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_dict</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">label</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>float<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#datatools.data.DataBunch" title="datatools.data.DataBunch">datatools.data.DataBunch</a><a class="headerlink" href="#datatools.data.DataBunch.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.DataBunch.info">
+<em class="property">property </em><code class="sig-name descname">info</code><a class="headerlink" href="#datatools.data.DataBunch.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all available keys.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.DataBunch.remove">
+<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classes</span><span class="o">=</span><span class="default_value"></span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value"></span></em>, <em class="sig-param"><span class="n">zero</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">nan</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.data.DataBunch.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove samples/rows from the data. The condition for removal can be any of the following:</p>
+<ul class="simple">
+<li><p>All samples which are labelled with a class from <code class="code docutils literal notranslate"><span class="pre">classes</span></code></p></li>
+<li><p>All samples with a label from <code class="code docutils literal notranslate"><span class="pre">labels</span></code></p></li>
+<li><p>All rows with only zero entries</p></li>
+<li><p>All samples with a nan label</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>classes</strong> (<em>list</em><em> or </em><em>tuple of str</em><em>, </em><em>optional</em>) – </p></li>
+<li><p><strong>labels</strong> (<em>list</em><em> or </em><em>tuple of int</em><em>, </em><em>optional</em>) – </p></li>
+<li><p><strong>zero</strong> (<em>bool</em><em>, </em><em>default=False</em>) – </p></li>
+<li><p><strong>nan</strong> (<em>bool</em><em>, </em><em>default=False</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.DataBunch.remove_units_from_header">
+<code class="sig-name descname">remove_units_from_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datatools.data.DataBunch.remove_units_from_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the units indicated by ‘[&lt;unit&gt;]’ from the column names.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.DataBunch.split_to_actions">
+<code class="sig-name descname">split_to_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span><a class="reference internal" href="#datatools.data.DataBunch" title="datatools.data.DataBunch">datatools.data.DataBunch</a><span class="p">]</span><span class="p">]</span><a class="headerlink" href="#datatools.data.DataBunch.split_to_actions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="datatools.data.DataCSV">
+<em class="property">class </em><code class="sig-prename descclassname">datatools.data.</code><code class="sig-name descname">DataCSV</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.data.DataCSV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datatools.data.ToolDataBase" title="datatools.data.ToolDataBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">datatools.data.ToolDataBase</span></code></a></p>
+<dl class="py method">
+<dt id="datatools.data.DataCSV.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#datatools.data.DataCSV" title="datatools.data.DataCSV">datatools.data.DataCSV</a><a class="headerlink" href="#datatools.data.DataCSV.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct DataFrame from dict of array-like or dicts.</p>
+<p>Creates DataFrame object from dictionary by columns or by index
+allowing dtype specification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dict</em>) – Of the form {field : array-like} or {field : dict}.</p></li>
+<li><p><strong>orient</strong> (<em>{'columns'</em><em>, </em><em>'index'}</em><em>, </em><em>default 'columns'</em>) – The “orientation” of the data. If the keys of the passed dict
+should be the columns of the resulting DataFrame, pass ‘columns’
+(default). Otherwise if the keys should be rows, pass ‘index’.</p></li>
+<li><p><strong>dtype</strong> (<em>dtype</em><em>, </em><em>default None</em>) – Data type to force, otherwise infer.</p></li>
+<li><p><strong>columns</strong> (<em>list</em><em>, </em><em>default None</em>) – <p>Column labels to use when <code class="docutils literal notranslate"><span class="pre">orient='index'</span></code>. Raises a ValueError
+if used with <code class="docutils literal notranslate"><span class="pre">orient='columns'</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.23.0.</span></p>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-meth docutils literal notranslate"><span class="pre">DataFrame.from_records()</span></code></dt><dd><p>DataFrame from ndarray (structured dtype), list of tuples, dict, or DataFrame.</p>
+</dd>
+<dt><code class="xref py py-meth docutils literal notranslate"><span class="pre">DataFrame()</span></code></dt><dd><p>DataFrame object creation using constructor.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<p>By default the keys of the dict become the DataFrame columns:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;col_1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;col_2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="go">   col_1 col_2</span>
+<span class="go">0      3     a</span>
+<span class="go">1      2     b</span>
+<span class="go">2      1     c</span>
+<span class="go">3      0     d</span>
+</pre></div>
+</div>
+<p>Specify <code class="docutils literal notranslate"><span class="pre">orient='index'</span></code> to create the DataFrame using dictionary
+keys as rows:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;row_1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;row_2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="go">       0  1  2  3</span>
+<span class="go">row_1  3  2  1  0</span>
+<span class="go">row_2  a  b  c  d</span>
+</pre></div>
+</div>
+<p>When using the ‘index’ orientation, the column names can be
+specified manually:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                       <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">])</span>
+<span class="go">       A  B  C  D</span>
+<span class="go">row_1  3  2  1  0</span>
+<span class="go">row_2  a  b  c  d</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.DataCSV.from_file">
+<em class="property">classmethod </em><code class="sig-name descname">from_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span><span class="p">:</span> <span class="n">pathlib.Path</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#datatools.data.DataCSV" title="datatools.data.DataCSV">datatools.data.DataCSV</a><a class="headerlink" href="#datatools.data.DataCSV.from_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.DataCSV.split">
+<code class="sig-name descname">split</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span><a class="reference internal" href="#datatools.data.DataCSV" title="datatools.data.DataCSV">datatools.data.DataCSV</a><span class="p">]</span><span class="p">]</span><span class="p">]</span><a class="headerlink" href="#datatools.data.DataCSV.split" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="datatools.data.DataType">
+<em class="property">class </em><code class="sig-prename descclassname">datatools.data.</code><code class="sig-name descname">DataType</code><a class="headerlink" href="#datatools.data.DataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Enum representing all valid data types</p>
+<dl class="py attribute">
+<dt id="datatools.data.DataType.ACC">
+<code class="sig-name descname">ACC</code><em class="property"> = 'acc'</em><a class="headerlink" href="#datatools.data.DataType.ACC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.data.DataType.GYR">
+<code class="sig-name descname">GYR</code><em class="property"> = 'gyr'</em><a class="headerlink" href="#datatools.data.DataType.GYR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.data.DataType.MAG">
+<code class="sig-name descname">MAG</code><em class="property"> = 'mag'</em><a class="headerlink" href="#datatools.data.DataType.MAG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.data.DataType.MIC">
+<code class="sig-name descname">MIC</code><em class="property"> = 'mic'</em><a class="headerlink" href="#datatools.data.DataType.MIC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.data.DataType.POS">
+<code class="sig-name descname">POS</code><em class="property"> = 'pos'</em><a class="headerlink" href="#datatools.data.DataType.POS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.data.DataType.VEL">
+<code class="sig-name descname">VEL</code><em class="property"> = 'vel'</em><a class="headerlink" href="#datatools.data.DataType.VEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="datatools.data.ToolDataBase">
+<em class="property">class </em><code class="sig-prename descclassname">datatools.data.</code><code class="sig-name descname">ToolDataBase</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.data.ToolDataBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.core.frame.DataFrame</span></code></p>
+<dl class="py method">
+<dt id="datatools.data.ToolDataBase.X">
+<em class="property">property </em><code class="sig-name descname">X</code><a class="headerlink" href="#datatools.data.ToolDataBase.X" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.ToolDataBase.features">
+<em class="property">property </em><code class="sig-name descname">features</code><a class="headerlink" href="#datatools.data.ToolDataBase.features" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.ToolDataBase.from_file">
+<em class="property">abstract classmethod </em><code class="sig-name descname">from_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.data.ToolDataBase.from_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.ToolDataBase.label">
+<em class="property">property </em><code class="sig-name descname">label</code><a class="headerlink" href="#datatools.data.ToolDataBase.label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.ToolDataBase.set_y">
+<code class="sig-name descname">set_y</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">broadcast</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.data.ToolDataBase.set_y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.ToolDataBase.sr">
+<em class="property">property </em><code class="sig-name descname">sr</code><a class="headerlink" href="#datatools.data.ToolDataBase.sr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.ToolDataBase.t">
+<em class="property">property </em><code class="sig-name descname">t</code><a class="headerlink" href="#datatools.data.ToolDataBase.t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.ToolDataBase.target">
+<em class="property">property </em><code class="sig-name descname">target</code><a class="headerlink" href="#datatools.data.ToolDataBase.target" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.ToolDataBase.time">
+<em class="property">property </em><code class="sig-name descname">time</code><a class="headerlink" href="#datatools.data.ToolDataBase.time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.ToolDataBase.ts">
+<em class="property">property </em><code class="sig-name descname">ts</code><a class="headerlink" href="#datatools.data.ToolDataBase.ts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.data.ToolDataBase.y">
+<em class="property">property </em><code class="sig-name descname">y</code><a class="headerlink" href="#datatools.data.ToolDataBase.y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="datatools.data.consistent_sampling_rate">
+<code class="sig-prename descclassname">datatools.data.</code><code class="sig-name descname">consistent_sampling_rate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.data.consistent_sampling_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="datatools.data.consistent_time_column">
+<code class="sig-prename descclassname">datatools.data.</code><code class="sig-name descname">consistent_time_column</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.data.consistent_time_column" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-datatools.nova">
+<span id="datatools-nova-module"></span><h2>datatools.nova module<a class="headerlink" href="#module-datatools.nova" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="datatools.nova.DiscreteAnnotation">
+<em class="property">class </em><code class="sig-prename descclassname">datatools.nova.</code><code class="sig-name descname">DiscreteAnnotation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scheme_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">label_mapping</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>int<span class="p">, </span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">annotator</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'Annotator'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.nova.DiscreteAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Representation of a discrete annotation, as defined by <a class="reference external" href="https://rawgit.com/hcmlab/nova/master/docs/">NOVA</a>.</p>
+<p>Actually, it is stored in two separate files: a header file (.annotation) and a data file (.annotation~)
+with the same file name. The header contains information about the scheme, while the data file holds the actual
+annotation data in ASCII (default) format.</p>
+<p>A discrete scheme consists of a list of predefined labels represented by a name and an unique identifier (id).
+Optionally, colour values can be assigned to the background and each label.</p>
+<p>The data file contains of one segment per line, which are structured as follows:
+&lt;beginning of a segment in seconds&gt; ; &lt;end of a segment in seconds&gt; ;
+&lt;label id as specified in the header&gt; ; &lt;confidence value&gt;</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scheme_name</strong> – Name of the annotation scheme.</p></li>
+<li><p><strong>label_mapping</strong> – Mapping of labels (IDs as integer) and their corresponding class names.</p></li>
+<li><p><strong>annotator</strong> – Name of the person which created this annotation file.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="datatools.nova.DiscreteAnnotation.add_annotation">
+<code class="sig-name descname">add_annotation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">row</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>Tuple<span class="p">[</span>float<span class="p">, </span>float<span class="p">, </span>int<span class="p">]</span><span class="p">, </span>Tuple<span class="p">[</span>float<span class="p">, </span>float<span class="p">, </span>int<span class="p">, </span>float<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.nova.DiscreteAnnotation.add_annotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new annotated segment. Passing the confidence (default=1) is optional.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.nova.DiscreteAnnotation.add_annotations">
+<code class="sig-name descname">add_annotations</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.nova.DiscreteAnnotation.add_annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add multiple annotated segments. Passing the confidence (default=1) is optional.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.nova.DiscreteAnnotation.add_annotations_from_prediction">
+<code class="sig-name descname">add_annotations_from_prediction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em>, <em class="sig-param"><span class="n">t</span><span class="p">:</span> <span class="n">numpy.ndarray</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.nova.DiscreteAnnotation.add_annotations_from_prediction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add annotations based on the prediction of a machine learning pipeline.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.nova.DiscreteAnnotation.data">
+<em class="property">property </em><code class="sig-name descname">data</code><a class="headerlink" href="#datatools.nova.DiscreteAnnotation.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Table with the actual annotation information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.nova.DiscreteAnnotation.define_label_mapping">
+<code class="sig-name descname">define_label_mapping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mapping</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>int<span class="p">, </span>str<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.nova.DiscreteAnnotation.define_label_mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite existing label mapping. Consistency with the data is not checked, so use with care!</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.nova.DiscreteAnnotation.from_files">
+<em class="property">classmethod </em><code class="sig-name descname">from_files</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filepath</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>pathlib.Path<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference internal" href="#datatools.nova.DiscreteAnnotation" title="datatools.nova.DiscreteAnnotation">datatools.nova.DiscreteAnnotation</a><span class="p">]</span><a class="headerlink" href="#datatools.nova.DiscreteAnnotation.from_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an DiscreteAnnotation object from a annotation file pair.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filepath</strong> – Name and path of the NOVA annotation file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DiscreteAnnotation object with the annotations from the input files.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>annotation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.nova.DiscreteAnnotation.items">
+<em class="property">property </em><code class="sig-name descname">items</code><a class="headerlink" href="#datatools.nova.DiscreteAnnotation.items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Items defining the annotation scheme.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.nova.DiscreteAnnotation.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">output</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>pathlib.Path<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.nova.DiscreteAnnotation.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save this annotation as two separate files with the passed name: a header file (.annotation)
+and a data file (.annotation~) with the same file name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.nova.DiscreteAnnotation.update_label_mapping">
+<code class="sig-name descname">update_label_mapping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mapping</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Dict<span class="p">[</span>int<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.nova.DiscreteAnnotation.update_label_mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update existing label mapping by remapping labels in data according to the passed label mapping.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="datatools.nova.Item">
+<em class="property">class </em><code class="sig-prename descclassname">datatools.nova.</code><code class="sig-name descname">Item</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">class_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">label</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.nova.Item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Annotation item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>class_name</strong> – Class name.</p></li>
+<li><p><strong>label</strong> – Label (integer ID).</p></li>
+<li><p><strong>color</strong> – Color associated with this item.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-datatools.query">
+<span id="datatools-query-module"></span><h2>datatools.query module<a class="headerlink" href="#module-datatools.query" title="Permalink to this headline">¶</a></h2>
+<dl class="py attribute">
+<dt id="datatools.query.Config">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">Config</code><a class="headerlink" href="#datatools.query.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper class which creates filter mask functions for dataframe columns,
+which contains only atomic (indivisible) values. All basic comparison operators are available for filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mapping</strong> – Mapping from short form (keys) to dataframe columns (values). E.g.: {“id”: “tool_id”}.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="datatools.query._default_key">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_default_key</code><a class="headerlink" href="#datatools.query._default_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key to be used when applying a comparision operator before setting a corresponding key.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.query._corresponding_key">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_corresponding_key</code><a class="headerlink" href="#datatools.query._corresponding_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key to be used when applying a comparision operator.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.query._mapping">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_mapping</code><a class="headerlink" href="#datatools.query._mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Parameters/mapping.</p>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">],</span> <span class="s2">&quot;tree_size&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;tree_size&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filt</span> <span class="o">=</span> <span class="n">_AtomicFilter</span><span class="p">(</span><span class="n">mapping</span><span class="o">=</span><span class="n">mapping</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>No we get a filter mask function which filters a dataframe based on the column “name”</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filt_func</span> <span class="o">=</span> <span class="n">filt</span> <span class="o">==</span> <span class="s2">&quot;bar&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mask</span> <span class="o">=</span> <span class="n">filt_func</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filtered_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filtered_df</span>
+<span class="go">  name  tree_size</span>
+<span class="go">1  bar          4</span>
+<span class="go">2  bar          8</span>
+</pre></div>
+</div>
+<p>We can also explicitly name what we want to filter</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filt_func</span> <span class="o">=</span> <span class="n">filt</span><span class="o">.</span><span class="n">size</span> <span class="o">&lt;</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="p">[</span><span class="n">filt_func</span><span class="p">(</span><span class="n">df</span><span class="p">)]</span>
+<span class="go">  name  tree_size</span>
+<span class="go">0  foo          2</span>
+<span class="go">1  bar          4</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.query.Measurement">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">Measurement</code><a class="headerlink" href="#datatools.query.Measurement" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper class which creates filter mask functions for dataframe columns,
+which contains only atomic (indivisible) values. All basic comparison operators are available for filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mapping</strong> – Mapping from short form (keys) to dataframe columns (values). E.g.: {“id”: “tool_id”}.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="id0">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_default_key</code><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key to be used when applying a comparision operator before setting a corresponding key.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id1">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_corresponding_key</code><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key to be used when applying a comparision operator.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id2">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_mapping</code><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Parameters/mapping.</p>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">],</span> <span class="s2">&quot;tree_size&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;tree_size&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filt</span> <span class="o">=</span> <span class="n">_AtomicFilter</span><span class="p">(</span><span class="n">mapping</span><span class="o">=</span><span class="n">mapping</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>No we get a filter mask function which filters a dataframe based on the column “name”</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filt_func</span> <span class="o">=</span> <span class="n">filt</span> <span class="o">==</span> <span class="s2">&quot;bar&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mask</span> <span class="o">=</span> <span class="n">filt_func</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filtered_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filtered_df</span>
+<span class="go">  name  tree_size</span>
+<span class="go">1  bar          4</span>
+<span class="go">2  bar          8</span>
+</pre></div>
+</div>
+<p>We can also explicitly name what we want to filter</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filt_func</span> <span class="o">=</span> <span class="n">filt</span><span class="o">.</span><span class="n">size</span> <span class="o">&lt;</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="p">[</span><span class="n">filt_func</span><span class="p">(</span><span class="n">df</span><span class="p">)]</span>
+<span class="go">  name  tree_size</span>
+<span class="go">0  foo          2</span>
+<span class="go">1  bar          4</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.query.MeasurementSeries">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">MeasurementSeries</code><a class="headerlink" href="#datatools.query.MeasurementSeries" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper class which creates filter mask functions for dataframe columns,
+which contains only atomic (indivisible) values. All basic comparison operators are available for filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mapping</strong> – Mapping from short form (keys) to dataframe columns (values). E.g.: {“id”: “tool_id”}.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="id3">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_default_key</code><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key to be used when applying a comparision operator before setting a corresponding key.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id4">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_corresponding_key</code><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key to be used when applying a comparision operator.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id5">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_mapping</code><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Parameters/mapping.</p>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">],</span> <span class="s2">&quot;tree_size&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;tree_size&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filt</span> <span class="o">=</span> <span class="n">_AtomicFilter</span><span class="p">(</span><span class="n">mapping</span><span class="o">=</span><span class="n">mapping</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>No we get a filter mask function which filters a dataframe based on the column “name”</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filt_func</span> <span class="o">=</span> <span class="n">filt</span> <span class="o">==</span> <span class="s2">&quot;bar&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mask</span> <span class="o">=</span> <span class="n">filt_func</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filtered_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filtered_df</span>
+<span class="go">  name  tree_size</span>
+<span class="go">1  bar          4</span>
+<span class="go">2  bar          8</span>
+</pre></div>
+</div>
+<p>We can also explicitly name what we want to filter</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filt_func</span> <span class="o">=</span> <span class="n">filt</span><span class="o">.</span><span class="n">size</span> <span class="o">&lt;</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="p">[</span><span class="n">filt_func</span><span class="p">(</span><span class="n">df</span><span class="p">)]</span>
+<span class="go">  name  tree_size</span>
+<span class="go">0  foo          2</span>
+<span class="go">1  bar          4</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt id="datatools.query.Query">
+<em class="property">class </em><code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">Query</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span><span class="p">:</span> <span class="n">pandas.core.frame.DataFrame</span></em>, <em class="sig-param"><span class="n">reader</span></em>, <em class="sig-param"><span class="n">query_type</span><span class="p">:</span> <span class="n">datatools.query._AtomicFilter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.query.Query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class which represents a query for measurement data. The available data is indexed and described by a dataframe.
+The query results represents the actual data and can be read by a reader object,
+which knows how and where to read the data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – Dataframe to be queried</p></li>
+<li><p><strong>reader</strong> – Reader object implementing a read_measurement function. Knows how and where to read the data from.</p></li>
+<li><p><strong>query_type</strong> (<em>{Action</em><em>, </em><em>Measurement}</em>) – Defines the type of query which will be performed.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;tool&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">],</span> <span class="s2">&quot;tool_id&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;01&quot;</span><span class="p">,</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span> <span class="s2">&quot;02&quot;</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">q</span> <span class="o">=</span> <span class="n">Query</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Measurement</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">Tool</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">Tool</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="s2">&quot;01&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we can have a look on the query results with</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">q</span><span class="o">.</span><span class="n">df</span>
+<span class="go">  tool tool_id</span>
+<span class="go">0  bar      01</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt id="datatools.query.Query.count">
+<code class="sig-name descname">count</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#datatools.query.Query.count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a count of DataBunches this Query would return.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.query.Query.df">
+<em class="property">property </em><code class="sig-name descname">df</code><a class="headerlink" href="#datatools.query.Query.df" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current query result as a dataframe</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.query.Query.filter_by">
+<code class="sig-name descname">filter_by</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Callable</span></em>, <em class="sig-param"><span class="n">join</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'and'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.query.Query.filter_by" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the given filtering criterion to this Query. Multiple criteria may be specified as comma separated;
+the effect is that they will be joined together using conjunction.
+Another logical operator maybe specified using the “join” argument.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.query.Query.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">remove_garbage</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">remove_not_annotated</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">columns_without_units</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">drop_zero_rows</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>DataBunch<span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span>DataBunch<span class="p">]</span><span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span>DataBunch<span class="p">]</span><span class="p">]</span><span class="p">]</span><a class="headerlink" href="#datatools.query.Query.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the results represented by this Query using the Reader object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>remove_garbage</strong> – If True, all samples labelled as garbage are removed (i.e. -1 in <code class="code docutils literal notranslate"><span class="pre">.annotation~</span></code> file).</p></li>
+<li><p><strong>remove_not_annotated</strong> – If True, all samples which are not labelled are removed.
+(i.e. no corresponding label in the <code class="code docutils literal notranslate"><span class="pre">.annotation~</span></code> file)</p></li>
+<li><p><strong>columns_without_units</strong> – If True, all units will be removed from the column names, e.g. “time [s]” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “time”</p></li>
+<li><p><strong>drop_zero_rows</strong> – All samples where all feature values are zero will be removed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.query.Tool">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">Tool</code><a class="headerlink" href="#datatools.query.Tool" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper class which creates filter mask functions for dataframe columns,
+which contains only atomic (indivisible) values. All basic comparison operators are available for filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mapping</strong> – Mapping from short form (keys) to dataframe columns (values). E.g.: {“id”: “tool_id”}.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="id6">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_default_key</code><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key to be used when applying a comparision operator before setting a corresponding key.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id7">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_corresponding_key</code><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key to be used when applying a comparision operator.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id8">
+<code class="sig-prename descclassname">datatools.query.</code><code class="sig-name descname">_mapping</code><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Parameters/mapping.</p>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">],</span> <span class="s2">&quot;tree_size&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;tree_size&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFAULT&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filt</span> <span class="o">=</span> <span class="n">_AtomicFilter</span><span class="p">(</span><span class="n">mapping</span><span class="o">=</span><span class="n">mapping</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>No we get a filter mask function which filters a dataframe based on the column “name”</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filt_func</span> <span class="o">=</span> <span class="n">filt</span> <span class="o">==</span> <span class="s2">&quot;bar&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mask</span> <span class="o">=</span> <span class="n">filt_func</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filtered_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filtered_df</span>
+<span class="go">  name  tree_size</span>
+<span class="go">1  bar          4</span>
+<span class="go">2  bar          8</span>
+</pre></div>
+</div>
+<p>We can also explicitly name what we want to filter</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filt_func</span> <span class="o">=</span> <span class="n">filt</span><span class="o">.</span><span class="n">size</span> <span class="o">&lt;</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="p">[</span><span class="n">filt_func</span><span class="p">(</span><span class="n">df</span><span class="p">)]</span>
+<span class="go">  name  tree_size</span>
+<span class="go">0  foo          2</span>
+<span class="go">1  bar          4</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-datatools.reader">
+<span id="datatools-reader-module"></span><h2>datatools.reader module<a class="headerlink" href="#module-datatools.reader" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="datatools.reader.MeasurementDataReader">
+<em class="property">class </em><code class="sig-prename descclassname">datatools.reader.</code><code class="sig-name descname">MeasurementDataReader</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span><span class="p">:</span> <span class="n">Union[str, pathlib.Path, None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_global_mapping</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.reader.MeasurementDataReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for loading and preparing data files and corresponding labels from a fixed directory structure
+with predefined naming conventions. Therefore it can parse annotation files created with NOVA.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>str</em><em> or </em><em>pathlib.Path</em><em>, </em><em>(</em><em>default=None</em><em>)</em>) – Registered source OR path to the root directory of a data source.
+In not set the registered default source will be used!</p></li>
+<li><p><strong>use_global_mapping</strong> – Enables usage of the global mapping if ‘label_mapping.csv’ can be found in the data source directory.</p></li>
+<li><p><strong>verbose</strong> (<em>integer</em><em>, </em><em>optional</em>) – Controls the verbosity: the higher, the more messages.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="datatools.reader.MeasurementDataReader._path_to_root_dir">
+<code class="sig-name descname">_path_to_root_dir</code><a class="headerlink" href="#datatools.reader.MeasurementDataReader._path_to_root_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to the root directory of the measurement data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>pathlib.Path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.reader.MeasurementDataReader._tool_dict">
+<code class="sig-name descname">_tool_dict</code><a class="headerlink" href="#datatools.reader.MeasurementDataReader._tool_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measurement series accessible by the corresponding tools’ names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.reader.MeasurementDataReader._info_df">
+<code class="sig-name descname">_info_df</code><a class="headerlink" href="#datatools.reader.MeasurementDataReader._info_df" title="Permalink to this definition">¶</a></dt>
+<dd><p>DataFrame containing information about all measurements within the root directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.1.1)">pandas.DataFrame</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.reader.MeasurementDataReader._cache_folder">
+<code class="sig-name descname">_cache_folder</code><a class="headerlink" href="#datatools.reader.MeasurementDataReader._cache_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporal location for caching files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>pathlib.Path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.reader.MeasurementDataReader._caching">
+<code class="sig-name descname">_caching</code><a class="headerlink" href="#datatools.reader.MeasurementDataReader._caching" title="Permalink to this definition">¶</a></dt>
+<dd><p>If True, caching for the read function is enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, default=True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="datatools.reader.MeasurementDataReader.global_mapping">
+<em class="property">property </em><code class="sig-name descname">global_mapping</code><a class="headerlink" href="#datatools.reader.MeasurementDataReader.global_mapping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.reader.MeasurementDataReader.query">
+<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">query_type: datatools.query._AtomicFilter = &lt;datatools.query._AtomicFilter object&gt;</em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference internal" href="#datatools.query.Query" title="datatools.query.Query">datatools.query.Query</a><span class="p">]</span><a class="headerlink" href="#datatools.reader.MeasurementDataReader.query" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.reader.MeasurementDataReader.read">
+<code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">measurement_series</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value"></span></em>, <em class="sig-param"><span class="n">tools</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value"></span></em>, <em class="sig-param"><span class="n">data_types</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value"></span></em>, <em class="sig-param"><span class="n">measurement_campaigns</span><span class="p">:</span> <span class="n">List<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value"></span></em>, <em class="sig-param"><span class="n">remove_garbage</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">remove_not_annotated</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">concatenated</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">columns_without_units</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">exclude_classes</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value"></span></em>, <em class="sig-param"><span class="n">exclude_labels</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value"></span></em>, <em class="sig-param"><span class="n">drop_zero_rows</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">caching</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.reader.MeasurementDataReader.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads and prepares measurement data from the measurement-data repository
+with convenient generation of datasets for machine learning in mind.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>measurement_series</strong> – Names (not a paths) of measurement series which should be processed.
+Passed names can be incomplete but should be unambiguous,
+e.g. “bmw” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “factory_bmw_regensburg-00-20170830”
+If <cite>tools</cite> is also passed, the cut set is loaded.</p></li>
+<li><p><strong>tools</strong> – Names of the hand tools for which all measurements should be processed.
+Passed names can be incomplete but should be unambiguous,
+e.g. “elec” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “electric_screwdriver”
+If <cite>measurement_series</cite> is also passed, the cut set is loaded.</p></li>
+<li><p><strong>data_types</strong> – Abbreviation for data types which should be incorporated. Can be ‘IMU’, ‘MF’ or ‘AUDIO’.</p></li>
+<li><p><strong>measurement_campaigns</strong> – Measurement campaign id for which all measurements should be processed.</p></li>
+<li><p><strong>remove_garbage</strong> – If True, all samples labelled as garbage are removed (i.e. -1 in <code class="code docutils literal notranslate"><span class="pre">.annotation~</span></code> file).</p></li>
+<li><p><strong>remove_not_annotated</strong> – If True, all samples which are not labelled are removed.
+(i.e. no corresponding label in the <code class="code docutils literal notranslate"><span class="pre">.annotation~</span></code> file)</p></li>
+<li><p><strong>concatenated</strong> – If True, all measurements will be concatenated (if matching sampling rates)
+to a single pd.DataFrame-like object.</p></li>
+<li><p><strong>columns_without_units</strong> – If True, all units will be removed from the column names, e.g. “time [s]” <span class="math notranslate nohighlight">\(\rightarrow\)</span> “time”</p></li>
+<li><p><strong>exclude_classes</strong> – All samples which are labelled with these classes (str) will be discarded.</p></li>
+<li><p><strong>exclude_labels</strong> – All samples which are labelled with these label (int) will be discarded.</p></li>
+<li><p><strong>drop_zero_rows</strong> – All samples where all feature values are zero will be removed.</p></li>
+<li><p><strong>caching</strong> – Enables caching of result (as pickle files).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>data</strong> – If there is only one measurement (data set), a DataBunch is returned instead of a dict. Each measurement
+can be accessed by its id as the key.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict or <a class="reference internal" href="#datatools.data.DataBunch" title="datatools.data.DataBunch">DataBunch</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="datatools.reader.Reader">
+<em class="property">class </em><code class="sig-prename descclassname">datatools.reader.</code><code class="sig-name descname">Reader</code><a class="headerlink" href="#datatools.reader.Reader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Helper class which can read csv data from a registered local database, which is a well structured folder tree.</p>
+<dl class="py attribute">
+<dt id="datatools.reader.Reader.EXTENSIONS">
+<code class="sig-name descname">EXTENSIONS</code><em class="property"> = ('.csv', '.annotation', '.annotation~')</em><a class="headerlink" href="#datatools.reader.Reader.EXTENSIONS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="datatools.reader.Reader.LABEL_MAPPING">
+<code class="sig-name descname">LABEL_MAPPING</code><em class="property">: Optional[Dict[int, str]]</em><em class="property"> = None</em><a class="headerlink" href="#datatools.reader.Reader.LABEL_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.reader.Reader.read_measurements">
+<em class="property">classmethod </em><code class="sig-name descname">read_measurements</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">measurement_series</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>pathlib.Path<span class="p">, </span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">data_types</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">'acc', 'gyr', 'mag', 'pos', 'vel', 'mic'</span></em><span class="sig-paren">)</span> &#x2192; Union<span class="p">[</span><a class="reference internal" href="#datatools.data.DataBunch" title="datatools.data.DataBunch">datatools.data.DataBunch</a><span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span><a class="reference internal" href="#datatools.data.DataBunch" title="datatools.data.DataBunch">datatools.data.DataBunch</a><span class="p">]</span><span class="p">]</span><a class="headerlink" href="#datatools.reader.Reader.read_measurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>All measurements of the selected measurement series are loaded. This includes the data and
+the corresponding labels (if available). If no specific desired data type is passed, all sensor data is loaded.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-datatools.utils">
+<span id="datatools-utils-module"></span><h2>datatools.utils module<a class="headerlink" href="#module-datatools.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="py exception">
+<dt id="datatools.utils.ConcatError">
+<em class="property">exception </em><code class="sig-prename descclassname">datatools.utils.</code><code class="sig-name descname">ConcatError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.utils.ConcatError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="datatools.utils.MSGPrinter">
+<em class="property">class </em><code class="sig-prename descclassname">datatools.utils.</code><code class="sig-name descname">MSGPrinter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.utils.MSGPrinter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="datatools.utils.MSGPrinter.LEVEL_NAMES">
+<code class="sig-name descname">LEVEL_NAMES</code><em class="property"> = {'debug': 3, 'error': 0, 'indent': 2, 'info': 2, 'warn': 1}</em><a class="headerlink" href="#datatools.utils.MSGPrinter.LEVEL_NAMES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="datatools.utils.MSGPrinter.set_verbosity">
+<code class="sig-name descname">set_verbosity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.utils.MSGPrinter.set_verbosity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt id="datatools.utils.SamplingRateError">
+<em class="property">exception </em><code class="sig-prename descclassname">datatools.utils.</code><code class="sig-name descname">SamplingRateError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.utils.SamplingRateError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="datatools.utils.TimeColumnError">
+<em class="property">exception </em><code class="sig-prename descclassname">datatools.utils.</code><code class="sig-name descname">TimeColumnError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.utils.TimeColumnError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="datatools.utils.convert2path">
+<code class="sig-prename descclassname">datatools.utils.</code><code class="sig-name descname">convert2path</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.utils.convert2path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="datatools.utils.count_objects">
+<code class="sig-prename descclassname">datatools.utils.</code><code class="sig-name descname">count_objects</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>Dict<span class="p">, </span>List<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">cls</span><span class="p">:</span> <span class="n">Type<span class="p">[</span>T<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.utils.count_objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="datatools.utils.flatten">
+<code class="sig-prename descclassname">datatools.utils.</code><code class="sig-name descname">flatten</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span><span class="p">:</span> <span class="n">MutableMapping</span></em>, <em class="sig-param"><span class="n">parent_key</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em>, <em class="sig-param"><span class="n">sep</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'_'</span></em>, <em class="sig-param"><span class="n">stop_cls</span><span class="p">:</span> <span class="n">Type</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Dict<a class="headerlink" href="#datatools.utils.flatten" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="datatools.utils.get_sampling_rate">
+<code class="sig-prename descclassname">datatools.utils.</code><code class="sig-name descname">get_sampling_rate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">t_unit</span><span class="o">=</span><span class="default_value">'s'</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">'mean'</span></em>, <em class="sig-param"><span class="n">ndigits</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.utils.get_sampling_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="datatools.utils.pickle_cache">
+<code class="sig-prename descclassname">datatools.utils.</code><code class="sig-name descname">pickle_cache</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">'/tmp'</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">10</span></em><span class="sig-paren">)</span><a class="headerlink" href="#datatools.utils.pickle_cache" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="datatools.utils.separate">
+<code class="sig-prename descclassname">datatools.utils.</code><code class="sig-name descname">separate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span><span class="p">:</span> <span class="n">MutableMapping</span></em>, <em class="sig-param"><span class="n">parent_key</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">''</span></em>, <em class="sig-param"><span class="n">sep</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'_'</span></em>, <em class="sig-param"><span class="n">stop_cls</span><span class="p">:</span> <span class="n">Type</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>Tuple<span class="p">]</span><a class="headerlink" href="#datatools.utils.separate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-datatools">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-datatools" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="datatools.show_versions">
+<code class="sig-prename descclassname">datatools.</code><code class="sig-name descname">show_versions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datatools.show_versions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, MLV, IIS Fraunhofer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

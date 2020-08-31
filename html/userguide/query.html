@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Query Interface in Detail &mdash; data-tools  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/main_stylesheet.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API Documentation" href="../api.html" />
+    <link rel="prev" title="Convert data for a seglearn pipeline" href="seglearn.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> data-tools
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="register.html">Register a data source to <code class="xref py py-class docutils literal notranslate"><span class="pre">MeasurementDataReader</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="load.html">Load data with the <code class="xref py py-class docutils literal notranslate"><span class="pre">MeasurementDataReader</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="interact.html">Interaction with the <code class="xref py py-class docutils literal notranslate"><span class="pre">DataBunch</span></code> class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interact.html#interaction-with-the-datacsv-class">Interaction with the <code class="xref py py-class docutils literal notranslate"><span class="pre">DataCSV</span></code> class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seglearn.html">Convert data for a seglearn pipeline</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Query Interface in Detail</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build-keyword-expressions">Build Keyword Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#special-filter-objects">Special Filter Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filter-using-keyword-expressions">Filter using Keyword Expressions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">data-tools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">User Guide</a> &raquo;</li>
+        
+      <li>Query Interface in Detail</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/userguide/query.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="query-interface-in-detail">
+<span id="queryinterface"></span><h1>Query Interface in Detail<a class="headerlink" href="#query-interface-in-detail" title="Permalink to this headline">¶</a></h1>
+<p>As we saw before one can create a query object using the <a class="reference internal" href="../datatools.html#datatools.reader.MeasurementDataReader" title="datatools.reader.MeasurementDataReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeasurementDataReader</span></code></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datatools</span> <span class="kn">import</span> <span class="n">MeasurementDataReader</span><span class="p">,</span> <span class="n">Measurement</span>
+<span class="n">mdr</span> <span class="o">=</span> <span class="n">MeasurementDataReader</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;my-data-source&#39;</span><span class="p">)</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">mdr</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query_type</span><span class="o">=</span><span class="n">Measurement</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Also have a look on the api documentation of the <a class="reference internal" href="../datatools.html#datatools.query.Query" title="datatools.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">Query</span></code></a> class.
+Now we want to have a closer look on how to formulate a precise query.</p>
+<div class="section" id="build-keyword-expressions">
+<h2>Build Keyword Expressions<a class="headerlink" href="#build-keyword-expressions" title="Permalink to this headline">¶</a></h2>
+<p>The main tool to formulate a query are <em>keyword expressions</em>. They always have the following syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">KEYWORD</span><span class="p">(</span><span class="o">.</span><span class="n">SPECIFIER</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">comparison</span> <span class="n">operator</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">VALUE</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MeasurementSeries</span> <span class="o">==</span> <span class="s2">&quot;pythagoras-04-20200219&quot;</span>
+<span class="n">MeasurementSeries</span><span class="o">.</span><span class="n">date</span> <span class="o">&gt;</span> <span class="s2">&quot;2020-02-19&quot;</span>
+<span class="n">Measurement</span><span class="o">.</span><span class="n">work_piece</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;engine block&quot;</span><span class="p">,</span> <span class="s2">&quot;suitcase&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Valid VALUES to compare with can be strings and also lists of strings depending on the use case.
+There are multiple <em>filter objects</em> to formulate such <em>keyword expressions</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datatools</span> <span class="kn">import</span> <span class="n">Tool</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">MeasurementSeries</span><span class="p">,</span> <span class="n">Measurement</span><span class="p">,</span> <span class="n">DataTypes</span><span class="p">,</span> <span class="n">Action</span>
+</pre></div>
+</div>
+<p>From the example above we can see that <em>filter objects</em> can have specifiers to state the query more precisely.
+For information about the special filters <cite>DataTypes</cite> and <cite>Action</cite> see next section.
+If no specifier is stated the default one is used. The available specifiers and default values for each object are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>filter object</p></th>
+<th class="head"><p>specifiers</p></th>
+<th class="head"><p>default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Tool</p></td>
+<td><p>[‘name’, ‘id’, ‘model’, ‘model_id’]</p></td>
+<td><p>name</p></td>
+</tr>
+<tr class="row-odd"><td><p>Config</p></td>
+<td><p>[‘rpm_cw’, ‘rpm_ccw’, ‘torque’, ‘air_pressure’]</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>MeasurementSeries</p></td>
+<td><p>[‘name’, ‘date’, ‘module’, ‘campaign_id’]</p></td>
+<td><p>name</p></td>
+</tr>
+<tr class="row-odd"><td><p>Measurement</p></td>
+<td><p>[‘id’, ‘person’, ‘work_piece’]</p></td>
+<td><p>id</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ul class="simple">
+<li><p>Invalid use of comparison operators may lead to errors or wrong results.</p></li>
+<li><p>Do not mistake the equal operator (==) for the assignment operator (=)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="special-filter-objects">
+<h2>Special Filter Objects<a class="headerlink" href="#special-filter-objects" title="Permalink to this headline">¶</a></h2>
+<p>To filter data based on the sensor data type one not only needs the special <em>filter object</em> <cite>DataTypes</cite> but also data type objects.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datatools</span> <span class="kn">import</span> <span class="n">ACC</span><span class="p">,</span> <span class="n">GYR</span><span class="p">,</span> <span class="n">MAG</span><span class="p">,</span> <span class="n">MIC</span><span class="p">,</span> <span class="n">POS</span><span class="p">,</span> <span class="n">VEL</span>
+</pre></div>
+</div>
+<p>With that the <em>keyword expressions</em> can be formulated as before:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DataTypes</span> <span class="o">==</span> <span class="p">[</span><span class="n">ACC</span><span class="p">,</span> <span class="n">MIC</span><span class="p">]</span>
+<span class="n">DataTypes</span> <span class="o">==</span> <span class="n">GYR</span>
+</pre></div>
+</div>
+<p>To build valid <em>keyword expressions</em> with the <cite>Action</cite> object it is necessary to change the <cite>query_type</cite>
+when creating a query object otherwise this expression has no effect:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">mdr</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query_type</span><span class="o">=</span><span class="n">Action</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Similar to the <cite>DataTypes</cite> object the <cite>Action</cite> object has no specifiers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Action</span> <span class="o">==</span> <span class="s2">&quot;tightening&quot;</span>
+<span class="n">Action</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;motor_activity_ccw&quot;</span><span class="p">,</span> <span class="s2">&quot;motor_activity_cw&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="filter-using-keyword-expressions">
+<h2>Filter using Keyword Expressions<a class="headerlink" href="#filter-using-keyword-expressions" title="Permalink to this headline">¶</a></h2>
+<p>The last step before we can get the desired data is to apply the formulated <em>keyword expressions</em>
+to the query object using its <cite>filter_by</cite> function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span>
+    <span class="n">DataTypes</span> <span class="o">==</span> <span class="n">ACC</span><span class="p">,</span>
+    <span class="n">Measurement</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;01&quot;</span><span class="p">,</span> <span class="s2">&quot;02&quot;</span><span class="p">],</span>
+    <span class="n">Measurement</span><span class="o">.</span><span class="n">work_piece</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;engine block&quot;</span><span class="p">,</span> <span class="s2">&quot;suitcase&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>keyword expressions</em> will linked by a logical conjunction (and) by default.
+If you want to change this behaviour and use a logical disjunction (or), you have to pass an additional
+keyword argument <code class="code docutils literal notranslate"><span class="pre">join=&quot;or&quot;</span></code> to the <cite>filter_by</cite> function.</p>
+</div>
+<p>To see the query result <em>before</em> reading the actual data the <code class="code docutils literal notranslate"><span class="pre">df</span></code> attribute of the query object can be used
+to get a pandas DataFrame with all matching <cite>Measurements</cite>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../api.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="seglearn.html" class="btn btn-neutral float-left" title="Convert data for a seglearn pipeline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, MLV, IIS Fraunhofer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

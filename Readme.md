@@ -30,6 +30,7 @@ jupyter notebook
 ```
 
 Changelog:
+- 2020-08-31: Add HTML API-docs and user guide
 - 2020-08-14: Update dataset with enhanced rivetter labels
 - 2020-08-12: Update dataset with twice the amount of labeled data; enhanced labels.
 - 2020-07-29: Update data loader and notebooks
